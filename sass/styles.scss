@@ -1,5 +1,160 @@
-$heading-color: #00f;
+body{
+  background-image: url(https://media.giphy.com/media/dQlhD8GoQ065lTlON8/giphy.gif);
+  font-family: 'Bebas Neue', cursive;
+}
 
-h1 {
-  color: $heading-color;
+li{
+  list-style: none;
+  font-size: 25px;
+}
+ul{
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2{
+  margin: 20px 0px 20px 0px;
+  font-size: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.wrapper{
+  margin: 145px auto 0 auto;
+  width: 1297px;
+  border:7px solid white;
+}
+
+img{
+  display: block;
+  border:7px solid black;
+}
+.image{
+  float: left;
+}
+
+.form{
+  border:7px solid black;
+  color: black;
+  float: left;
+  background-color: #55d6ad;
+  width: 800px;
+  height: 713px;
+  position: relative;
+  border-left: none;
+}
+
+.subForm{
+  background-color: white;
+  border:7px solid black;
+  width: 500px;
+  margin: 0 auto;
+}
+label{
+  display: flex;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+input{
+  font-family: 'Bebas Neue', cursive;
+  display: flex;
+  width: 400px;
+  height: 28px;
+  background: none;
+  border: none;
+  border-bottom:4px solid black;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.send{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
+  color: white;
+  background-color: black;
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  bottom: 35px;
+  left: 310px;
+}
+
+.send:focus{
+  background-color: white;
+  color: black;
+}
+
+.final{
+  margin-bottom: 30px;
+}
+
+#modal{
+  position: fixed;
+  top: 270px;
+  bottom: 0;
+  right: 0;
+  left: 570px;
+  background-color: white;
+  width: 785px;
+  height: 500px;
+  display: none;
+}
+
+#modal img{
+  width: 20px;
+  height: 20px;
+}
+
+.preModal {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(https://media.giphy.com/media/dQlhD8GoQ065lTlON8/giphy.gif);
+}
+
+.insideModal {
+  background-color:  #55d6ad;
+  border:7px solid black;
+  width: 760px;
+  height: 470px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.insideModal p{
+  font-size: 30px;
+  margin: 10px 0px 30px 0px;
+}
+#ok{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
+  color: white;
+  background-color: black;
+  width: 100px;
+  height: 50px;
+}
+
+#ok:focus{
+  background-color: white;
+  color: black;
 }

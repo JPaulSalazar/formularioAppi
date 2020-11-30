@@ -1,5 +1,4 @@
 const form = document.getElementById('form');
-const button = document.getElementById('send');
 const modal = document.getElementById('modal');
 const preModal = document.getElementById('preModal');
 
@@ -17,18 +16,17 @@ function writeModal(data) {
     <p>¡Muchas gracias!<br>Pronto nos comunicaremos con usted.</p>
     <button type="submit" id="ok">ok</button>
   </div>`;
-  console.log(write);
   modal.innerHTML = write;
   const ex = document.getElementById('ok');
   ex.addEventListener('click', (event) => {
     event.preventDefault();
     modal.style.display = 'none';
     preModal.style.display = 'none';
-    form.elements[0].value = "";
-    form.elements[1].value = "";
-    form.elements[2].value = "";
-    form.elements[3].value = "";
-    form.elements[4].value = "";
+    form.elements[0].value = '';
+    form.elements[1].value = '';
+    form.elements[2].value = '';
+    form.elements[3].value = '';
+    form.elements[4].value = '';
   });
 }
 
@@ -46,7 +44,6 @@ function send(object) {
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  console.log(form);
   const name = form.elements[0].value;
   const email = form.elements[1].value;
   const numero = form.elements[2].value;
@@ -74,4 +71,3 @@ form.addEventListener('submit', (event) => {
   modal.style.display = 'block';
   preModal.style.display = 'block';
 });
-
