@@ -8,24 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Javascript 2 Project Template</title>
   <link rel="stylesheet" href="public/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="wrapper">
-    <h1>Formulario</h1>
-    <form id="form">
-      <label for="name">NOMBRE :</label>
-      <input type="text" value="" id="name" name="nombre" required>
-      <label for="email">EMAIL :</label>
-      <input type="email" value="" id="email" name="email" required>
-      <label for="number">TELEFONO :</label>
-      <input type="tel" value="" id="number" name="number">
-      <label for="asunto"> ASUNTO :</label>
-      <input type="text" value="" id="asunto" name="asunto" required>
-      <label for="msj">MENSAJE :</label>
-      <input type="text" value="" id="msj" name="msj" required>
-      <button type="submit" value="send" id="send">ENVIAR</button>
-    </form>
-    <div class="modal">
+  <div class="wrapper clearfix">
+    <div class="image">
+      <img src="./img/rsz_1photo-1583994009785-37ec30bf9342.jpg" alt="girl">
+    </div>
+    <div class="form clearfix">
+      <h1>Formulario</h1>
+      <div class="subForm">
+        <form id="form">
+          <label for="name">NOMBRE :</label>
+          <input type="text" value="" id="name" name="nombre" required>
+          <label for="email">EMAIL :</label>
+          <input type="email" value="" id="email" name="email" required>
+          <label for="number">TELEFONO :</label>
+          <input type="tel" value="" id="number" name="number">
+          <label for="asunto"> ASUNTO :</label>
+          <input type="text" value="" id="asunto" name="asunto" required>
+          <label for="msj">MENSAJE :</label>
+          <input class="final" type="textarea" value="" id="msj" name="msj" required>
+          <button type="submit" value="send" class="send" id="send">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="preModal" class="preModal">
+    <div id="modal">
     </div>
   </div>
   <script src="js/script.js"></script>

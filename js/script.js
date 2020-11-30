@@ -1,7 +1,36 @@
 const form = document.getElementById('form');
 const button = document.getElementById('send');
-const ex = document.getElementById('close');
 const modal = document.getElementById('modal');
+const preModal = document.getElementById('preModal');
+
+function writeModal(data) {
+  const write = `
+  <div class="insideModal">
+    <h2>Su mensaje ha sido recibidio:</h2>
+    <ul>
+      <li>NOMBRE: ${data.name}</li>
+      <li>EMAIL: ${data.email}</li>
+      <li>TELEFONO: ${data.phone}</li>
+      <li>ASUNTO: ${data.subject}</li>
+      <li>MENSAJE: ${data.message}</li>
+    </ul>
+    <p>¡Muchas gracias!<br>Pronto nos comunicaremos con usted.</p>
+    <button type="submit" id="ok">ok</button>
+  </div>`;
+  console.log(write);
+  modal.innerHTML = write;
+  const ex = document.getElementById('ok');
+  ex.addEventListener('click', (event) => {
+    event.preventDefault();
+    modal.style.display = 'none';
+    preModal.style.display = 'none';
+    form.elements[0].value = "";
+    form.elements[1].value = "";
+    form.elements[2].value = "";
+    form.elements[3].value = "";
+    form.elements[4].value = "";
+  });
+}
 
 function send(object) {
   const fetchOptions = {
@@ -11,7 +40,7 @@ function send(object) {
   fetch('https://js2-contact-form-api.netlify.app/api/contact', fetchOptions)
     .then((response) => response.json())
     .then((data) => {
-      modal(data);
+      writeModal(data);
     });
 }
 
@@ -42,17 +71,7 @@ form.addEventListener('submit', (event) => {
     };
     send(object);
   }
-});
-
-funtion modal(data){
-  const write = ``
-}
-/*button.addEventListener('click', (event) =>{
-  event.preventDefault;
   modal.style.display = 'block';
+  preModal.style.display = 'block';
 });
 
-ex.addEventListener('click', (event) =>{
-  event.preventDefault;
-  modal.style.display = 'none';
-});*/
